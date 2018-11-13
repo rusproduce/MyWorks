@@ -2,16 +2,11 @@ import java.util.*;
 
 public class Example {
     public static void main(String[] args) {
-        int count = 0;
-        String r = "world sasda world ";
-        String f = "world";
-        String t = "w";
-        String g = "w ";
-
-//        System.out.println(r.contains());
-//        System.out.println(g.matches(t + "(\\w+)? "));
-//        System.out.println(r.contains();
+        int r = 2140000000;
+        System.out.println(r);
     }
+
+
     public static int counting(String input, int numberOfWords) {
         String[] words = input.split(" ");
         int count = words[0].length();
@@ -33,7 +28,7 @@ public class Example {
                 }
 
             }
-            if (flag){
+            if (flag) {
                 count += words[i].length();
             }
         }
@@ -41,3 +36,26 @@ public class Example {
         return count;
     }
 }
+
+
+//   if (input.contains("APPOINT")) {
+//           if (meets.isEmpty()) {
+//           meets.add(new Meet(input.replaceAll("APPOINT ", "")));
+//           System.out.println("OK");
+//           } else {
+//           Meet newMeet = new Meet(input.replaceAll("APPOINT ", ""));
+////                    if (meets.stream().anyMatch(meet -> meet.crossCheck(newMeet.getDay(), newMeet.getStart(), newMeet.getEnd()))) {
+//
+//           if (meets.stream().anyMatch(meet -> meet.appoint(newMeet.getDay(), newMeet.getStart(), newMeet.getEnd(), name))) {
+//           System.out.println("FAIL");
+//           for (String name : newMeet.people) {
+//           meets.stream().anyMatch(meet -> meet.appoint(newMeet.getDay(), newMeet.getStart(), newMeet.getEnd(), name));
+//           }
+//           System.out.println();
+//           Meet.space = "";
+////                    }
+//           }
+//           else {
+//           meets.add(newMeet);
+//           System.out.println("OK");
+//           }

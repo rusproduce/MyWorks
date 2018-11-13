@@ -8,21 +8,21 @@ public class YandexN2 {
     public static List<String> meeting = new ArrayList<>();
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        String n = scanner.nextLine();
-        int nOfRequests = Integer.parseInt(n);
-        int count = 0;
-
-        while (count < nOfRequests) {
-            String input = scanner.nextLine();
-            if (input.contains("APPOINT")) {
-                appoint(input.replaceAll("APPOINT ", ""));
-            }
-            if (input.contains("PRINT")) {
-                print(input.replaceAll("PRINT ", ""));
-            }
-            count++;
-        }
+//        Scanner scanner = new Scanner(System.in);
+//        String n = scanner.nextLine();
+//        int nOfRequests = Integer.parseInt(n);
+//        int count = 0;
+////
+//        while (count < nOfRequests) {
+//            String input = scanner.nextLine();
+//            if (input.contains("APPOINT")) {
+//                appoint(input.replaceAll("APPOINT ", ""));
+//            }
+//            if (input.contains("PRINT")) {
+//                print(input.replaceAll("PRINT ", ""));
+//            }
+//            count++;
+//        }
 //        test();
     }
 
@@ -39,7 +39,7 @@ public class YandexN2 {
         int duration = Integer.parseInt(infOfMeeting[2]);
         Meet meet = new Meet();
 
-        meet.dayOfMeeting = Integer.parseInt(infOfMeeting[0]);
+//        meet.dayOfMeeting = Integer.parseInt(infOfMeeting[0]);
         meet.startOfMeeting = hh * 60 + mm;
         meet.endOfMeet = meet.startOfMeeting + duration;
         return meet;

@@ -3,18 +3,26 @@ import java.util.Scanner;
 public class YandexN1 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        String inputN = scanner.nextLine();
-        int nOfServers = Integer.parseInt(inputN);
-        String[] inputs = new String[nOfServers];
-        double sum = 0;
-        for (int i = 0; i < nOfServers; i++) {
-            inputs[i] = scanner.nextLine();
-            sum += p(inputs[i]);
-        }
-        for (String input : inputs) {
-            System.out.println(p(input)/sum);
-        }
+        boolean flag = true;
+        while(flag) {
+            String inputN = scanner.nextLine();
+            try {
+                int nOfServers = Integer.parseInt(inputN);
 
+                String[] inputs = new String[nOfServers];
+                double sum = 0;
+                for (int i = 0; i < nOfServers; i++) {
+                    inputs[i] = scanner.nextLine();
+                    sum += p(inputs[i]);
+                }
+                for (String input : inputs) {
+                    System.out.println(p(input) / sum);
+                }
+                flag = false;
+            } catch (Exception w) {
+                System.out.println("Вы ввели не корректное число");
+            }
+        }
     }
 
     public static double p(String input) {
